@@ -31,7 +31,7 @@ class SimpleLinearRegression1:
         ''' 给定待预测数据x_predict，返回表示x_predict的预测结果向量'''
 
         assert x_predict.ndim == 1, "Simple linear regression can only solve simple feature training data."
-        assert self.a_ is None and self.b_ is None, "Must fit before predict!"
+        assert self.a_ is not None and self.b_ is not None, "Must fit before predict!"
 
         return ([self._predict(x) for x in x_predict])
 
